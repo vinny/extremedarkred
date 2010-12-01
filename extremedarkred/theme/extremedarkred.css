@@ -1,0 +1,66 @@
+/* Extreme Dark Red Style Sheet 
+-------------------------------------------------*/
+
+/* Content */
+div#content {
+	padding: 15px;
+}
+
+/* Navigation */
+
+#nav {
+	padding: 1px;
+	background: #2D2D2D;
+    border: 1px solid #000000;
+}
+
+div.breadcrumbs {
+	color: #FFF;
+	font-size: 0.85em;
+	margin-bottom: 1px;
+	font-weight: bold;
+	background: #000 url("{T_THEME_PATH}/images/breadcrumbs.gif") repeat-x;
+	padding: 5px;
+	height: 15px;
+}
+div.breadcrumbs a {
+	color: #D0D0D0;
+	text-decoration: none;
+}
+div.breadcrumbs a:hover {
+	color: #98AAB1;
+}
+
+#link_box {
+	background: #232323;
+	border-color: #000000;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    margin-bottom: 1px;
+	padding: 4px;
+}
+
+#text_box {
+	float: right;
+	margin-top: -40px;
+	text-align: right;
+}
+
+
+/* Menu */
+div#navmenu {
+	font-size: 0.9em;
+	text-align: center;
+	background: #000 url("{T_THEME_PATH}/images/bg_navmenu.gif") repeat-x;
+	border: 1px solid #808080;
+	border-width: 1px 0;
+	padding: 4px 0;
+}
+div#navmenu a:link, div#navmenu a:active, div#navmenu a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+div#navmenu a:hover {
+	color: #D0D0D0;
+	text-decoration: none;
+}
