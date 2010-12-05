@@ -29,20 +29,105 @@
 	</form>
 <!-- ENDIF -->
 
-<!-- IF S_DISPLAY_ONLINE_LIST -->
-	<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
-	<p>{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
-	<!-- IF LEGEND --><br /><em>{L_LEGEND}: {LEGEND}</em><!-- ENDIF --></p>
-<!-- ENDIF -->
+<br />
+    <!-- IF S_DISPLAY_ONLINE_LIST -->
+	{$BEGIN_TCORNERS}<!-- IF U_VIEWONLINE --><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a><!-- ELSE -->{L_WHO_IS_ONLINE}<!-- ENDIF -->{$END_TCORNERS}
+	    <div class="forabg">
+		    <div class="inner">
+			    <ul class="topiclist">
+				    <li class="header">
+					    <dl class="icon">
+						    <dt>&nbsp;</dt>
+						</dl>
+					</li>
+				</ul>
+				<ul class="topiclist forums">
+				    <li class="row">
+					    <dl>
+						    <dt title="{L_WHO_IS_ONLINE}" style="width: auto;">
+							    <span>{TOTAL_USERS_ONLINE}
+								    <br />{RECORD_USERS}
+									<br />
+									<strong>{LOGGED_IN_USER_LIST}</strong><br/>
+									<!-- IF LEGEND --><br /><strong>{L_LEGEND}:</strong> {LEGEND}<!-- ENDIF -->
+								</span>
+							</dt>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		{$BCORNERS}
+		<br />
+    <!-- ENDIF -->
 
-<!-- IF S_DISPLAY_BIRTHDAY_LIST and BIRTHDAY_LIST -->
-	<h3>{L_BIRTHDAYS}</h3>
-	<p><!-- IF BIRTHDAY_LIST -->{L_CONGRATULATIONS}: <strong>{BIRTHDAY_LIST}</strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF --></p>
-<!-- ENDIF -->
+    <!-- IF S_DISPLAY_BIRTHDAY_LIST and BIRTHDAY_LIST -->
+	{$BEGIN_TCORNERS}{L_BIRTHDAYS}{$END_TCORNERS}
+        <div class="forabg">
+		    <div class="inner">
+             <ul class="topiclist">
+                <li class="header">
+                   <dl class="icon">
+				        <dt>&nbsp;</dt>
+					</dl>
+				</li>
+			</ul>
+			<ul class="topiclist forums">
+			    <li class="row">
+				    <dl>
+					    <dt title="{L_CONGRATULATIONS}" style="width: auto;">
+						    <span class="forumtitle">
+							    <!-- IF BIRTHDAY_LIST -->{L_CONGRATULATIONS}: <strong>{BIRTHDAY_LIST}</strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF -->
+							</span>
+						</dt>
+					</dl>
+				</li>
+			</ul>
+		</div>
+    </div>
+	{$BCORNERS}
+		<br />
+    <!-- ENDIF -->
 
-<!-- IF NEWEST_USER -->
-	<h3>{L_STATISTICS}</h3>
-	<p>{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}</p>
-<!-- ENDIF -->
+    <!-- IF NEWEST_USER -->
+	{$BEGIN_TCORNERS}{L_STATISTICS}{$END_TCORNERS}
+	    <div class="forabg">
+             <div class="inner">
+                <ul class="topiclist">
+                    <li class="header">
+                        <dl class="icon">
+				            <dt>&nbsp;</dt>
+					    </dl>
+				    </li>
+			    </ul>
+				<ul class="topiclist forums">
+				    <li class="row">
+					    <dl>
+                            <dt title="{L_STATISTICS}" style="width: auto;">
+							    <span class="forumtitle">
+								    <strong>{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS}
+									    <br />{NEWEST_USER}</strong>
+								</span>
+							</dt>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		{$BCORNERS}
+		<br />
+    <!-- ENDIF -->
+
+	<br />
+	
+    <ul class="center">
+        <li>
+            <img src="{T_IMAGESET_PATH}/forum_unread.gif" alt="{L_NEW_POSTS}" />&nbsp;&nbsp;{L_NEW_POSTS}&nbsp;&nbsp;
+            &nbsp;&nbsp;<img src="{T_IMAGESET_PATH}/forum_read.gif" alt="{L_NO_NEW_POSTS}" />&nbsp;&nbsp;{L_NO_NEW_POSTS}&nbsp;&nbsp;
+            &nbsp;&nbsp;<img src="{T_IMAGESET_PATH}/forum_read_locked.gif" alt="{L_FORUM_LOCKED}" />&nbsp;&nbsp;{L_FORUM_LOCKED}
+        </li>
+    </ul>
+
+    <br style="clear: both;" />	
 
 <!-- INCLUDE overall_footer.html -->

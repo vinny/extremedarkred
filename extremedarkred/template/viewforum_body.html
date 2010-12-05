@@ -117,13 +117,16 @@
 
 	<!-- IF not topicrow.S_TOPIC_TYPE_SWITCH and not topicrow.S_FIRST_ROW -->
 		</ul>
-		<span class="corners-bottom"><span></span></span></div>
+		</div>
 	</div>
+	{$BCORNERS}
+		<br />
 	<!-- ENDIF -->
 
 	<!-- IF topicrow.S_FIRST_ROW or not topicrow.S_TOPIC_TYPE_SWITCH -->
+	{$BEGIN_TCORNERS}<!-- IF S_DISPLAY_ACTIVE -->{L_ACTIVE_TOPICS}<!-- ELSEIF topicrow.S_TOPIC_TYPE_SWITCH and (topicrow.S_POST_ANNOUNCE or topicrow.S_POST_GLOBAL) -->{L_ANNOUNCEMENTS}<!-- ELSE -->{L_TOPICS}<!-- ENDIF -->{$END_TCORNERS}
 		<div class="forumbg<!-- IF topicrow.S_TOPIC_TYPE_SWITCH and (topicrow.S_POST_ANNOUNCE or topicrow.S_POST_GLOBAL) --> announcement<!-- ENDIF -->">
-		<div class="inner"><span class="corners-top"><span></span></span>
+		<div class="inner">
 		<ul class="topiclist">
 			<li class="header">
 				<dl class="icon">
@@ -155,8 +158,10 @@
 
 	<!-- IF topicrow.S_LAST_ROW -->
 			</ul>
-		<span class="corners-bottom"><span></span></span></div>
+		</div>
 	</div>
+	{$BCORNERS}
+		<br />
 	<!-- ENDIF -->
 
 <!-- BEGINELSE -->

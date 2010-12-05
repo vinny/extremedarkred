@@ -3,13 +3,16 @@
 	<!-- IF (forumrow.S_IS_CAT and not forumrow.S_FIRST_ROW) or forumrow.S_NO_CAT  -->
 			</ul>
 
-			<span class="corners-bottom"><span></span></span></div>
+			</div>
 		</div>
+		{$BCORNERS}
+		<br />
 	<!-- ENDIF -->
 
 	<!-- IF forumrow.S_IS_CAT or forumrow.S_FIRST_ROW  or forumrow.S_NO_CAT  -->
+	{$BEGIN_TCORNERS}<!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a><!-- ELSE -->{L_FORUM}<!-- ENDIF -->{$END_TCORNERS}
 		<div class="forabg">
-			<div class="inner"><span class="corners-top"><span></span></span>
+			<div class="inner">
 			<ul class="topiclist">
 				<li class="header">
 					<dl class="icon">
@@ -55,8 +58,10 @@
 	<!-- IF forumrow.S_LAST_ROW -->
 			</ul>
 
-			<span class="corners-bottom"><span></span></span></div>
+			</div>
 		</div>
+		{$BCORNERS}
+		<br />
 	<!-- ENDIF -->
 
 <!-- BEGINELSE -->

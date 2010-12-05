@@ -103,7 +103,14 @@ li.header dd {
 }
 
 li.header dl.icon {
+	background: url("{T_THEME_PATH}/images/bg_forum.gif") repeat-x;
 	min-height: 0;
+	color: #FFFFFF;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 2px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 li.header dl.icon dt {
