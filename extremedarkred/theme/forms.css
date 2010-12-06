@@ -156,7 +156,9 @@ fieldset.fields2 dl:hover dt label {
 
 /* Quick-login on index page */
 fieldset.quick-login {
-	margin-top: 5px;
+	background: #202020;
+    margin-top: 5px;
+    padding: 6px;
 }
 
 fieldset.quick-login input {
@@ -167,10 +169,13 @@ fieldset.quick-login input.inputbox {
 	width: 15%;
 	vertical-align: middle;
 	margin-right: 5px;
-	background-color: #f3f3f3;
+	background-color: #800000;
+	border: 1px solid #FF0000;
 }
 
 fieldset.quick-login label {
+	color: #FFFFFF;
+	font-size: 0.9em;
 	white-space: nowrap;
 	padding-right: 2px;
 }
