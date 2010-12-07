@@ -237,13 +237,13 @@ li.reported:hover {
 }
 
 div.rules {
-	background-color: #ECD5D8;
+	background: #2D2D2D;
 	color: #BC2A4D;
-}
-
-p.rules {
-	background-color: #ECD5D8;
-	background-image: none;
+	padding: 1px;
+   	border-color: #000000;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    margin-bottom: 1px;
 }
 
 /*  	

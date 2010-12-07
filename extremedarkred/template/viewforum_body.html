@@ -11,18 +11,17 @@
 <!-- ENDIF -->
 
 <!-- IF S_FORUM_RULES -->
-	<div class="rules">
-		<div class="inner"><span class="corners-top"><span></span></span>
-
+	{$BEGIN_TCORNERS}{L_FORUM_RULES}{$END_TCORNERS}
+	<div class="rules"><p style="background: #202020; margin-bottom: 0; padding: 6px;">
 		<!-- IF U_FORUM_RULES -->
 			<a href="{U_FORUM_RULES}">{L_FORUM_RULES}</a>
 		<!-- ELSE -->
 			<strong>{L_FORUM_RULES}</strong><br />
 			{FORUM_RULES}
 		<!-- ENDIF -->
-
-		<span class="corners-bottom"><span></span></span></div>
-	</div>
+	</p></div>
+	{$BCORNERS}
+		<br />
 <!-- ENDIF -->
 
 <!-- IF S_HAS_SUBFORUM -->
