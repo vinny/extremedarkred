@@ -997,11 +997,6 @@ fieldset.quick-login input.inputbox {
 	border-color: #11A3EA;
 }
 
-.inputbox:focus {
-	border-color: #11A3EA;
-	color: #0F4987;
-}
-
 /* Form button styles
 ---------------------------------------- */
 
@@ -1010,7 +1005,7 @@ a.button1, input.button1, input.button3, a.button2, input.button2 {
 	background-color: #800000;
 	border: 1px solid #FF0000;
     color: #FFFFFF;
-    font: 1.1em Verdana,Arial,Helvetica,sans-serif;
+    font: 1em Verdana,Arial,Helvetica,sans-serif;
     padding: 1px;
 }
 
@@ -1039,7 +1034,11 @@ a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, inpu
 }
 
 input.search {
-	background-image: url("{T_THEME_PATH}/images/icon_textbox_search.gif");
+	background: #800000;
+	border: 1px solid #FF0000;
+	color: #FFFFFF;
+    font: 1em Verdana, Arial, Helvetica, sans-serif;
+    padding: 1px;
 }
 
 input.disabled {
