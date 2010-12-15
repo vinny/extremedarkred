@@ -30,7 +30,7 @@
 		<tbody>
 	<!-- IF S_LOGS -->
 		<!-- BEGIN log -->
-		<!-- IF log.S_ROW_COUNT is even --><tr class="bg1"><!-- ELSE --><tr class="bg2"><!-- ENDIF -->
+		<!-- IF log.S_ROW_COUNT is even --><tr class="bg5"><!-- ELSE --><tr class="bg5"><!-- ENDIF -->
 			<td>{log.USERNAME}</td>
 			<td style="text-align: center">{log.IP}</td>
 			<td style="text-align: center">{log.DATE}</td>
@@ -42,7 +42,7 @@
 		<!-- END log -->
 	<!-- ELSE -->
 		<tr>
-			<td class="bg1" colspan="<!-- IF S_CLEAR_ALLOWED -->5<!-- ELSE -->4<!-- ENDIF -->" align="center"><span class="gen">{L_NO_ENTRIES}</span></td>
+			<td class="bg5" colspan="<!-- IF S_CLEAR_ALLOWED -->5<!-- ELSE -->4<!-- ENDIF -->" align="center"><span class="gen">{L_NO_ENTRIES}</span></td>
 		</tr>
 	<!-- ENDIF -->
 	</tbody>

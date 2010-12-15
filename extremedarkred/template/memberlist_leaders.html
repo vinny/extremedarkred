@@ -4,8 +4,8 @@
 
 <form method="post" action="{S_MODE_ACTION}">
 
-<div class="forumbg">
-	<div class="inner"><span class="corners-top"><span></span></span>
+{$BEGIN_TCORNERS}{PAGE_TITLE}{$END_TCORNERS}
+<div class="forabg">
 
 	<table class="table1" cellspacing="1">
 	<thead>
@@ -17,7 +17,7 @@
 	</thead>
 	<tbody>
 <!-- BEGIN admin -->
-	<tr class="<!-- IF admin.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+	<tr class="bg5">
 		<td><!-- IF admin.RANK_IMG --><span class="rank-img">{admin.RANK_IMG}</span><!-- ELSE --><span class="rank-img">{admin.RANK_TITLE}</span><!-- ENDIF -->{admin.USERNAME_FULL}</td>
 		<td class="info"><!-- IF admin.U_GROUP -->
 			<a<!-- IF admin.GROUP_COLOR --> style="font-weight: bold; color:#{admin.GROUP_COLOR}"<!-- ENDIF --> href="{admin.U_GROUP}">{admin.GROUP_NAME}</a>
@@ -27,18 +27,18 @@
 		<td class="info">-</td>
 	</tr>
 <!-- BEGINELSE -->
-	<tr class="bg1">
+	<tr class="bg5">
 		<td colspan="3"><strong>{L_NO_ADMINISTRATORS}</strong></td>
 	</tr>
 <!-- END admin -->
 	</tbody>
 	</table>
 	
-	<span class="corners-bottom"><span></span></span></div>
 </div>
+	{$BCORNERS}
+		<br />
 
-<div class="forumbg">
-	<div class="inner"><span class="corners-top"><span></span></span>
+<div class="forabg">
 	 
 	<table class="table1" cellspacing="1">
 	<thead>
@@ -50,7 +50,7 @@
 	</thead>
 	<tbody>
 <!-- BEGIN mod -->
-	<tr class="<!-- IF mod.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+	<tr class="bg5">
 		<td><!-- IF mod.RANK_IMG --><span class="rank-img">{mod.RANK_IMG}</span><!-- ELSE --><span class="rank-img">{mod.RANK_TITLE}</span><!-- ENDIF -->{mod.USERNAME_FULL}</td>
 		<td class="info"><!-- IF mod.U_GROUP -->
 			<a<!-- IF mod.GROUP_COLOR --> style="font-weight: bold; color:#{mod.GROUP_COLOR}"<!-- ENDIF --> href="{mod.U_GROUP}">{mod.GROUP_NAME}</a>
@@ -60,15 +60,16 @@
 		<td class="info"><!-- IF not mod.FORUMS -->{L_ALL_FORUMS}<!-- ELSE --><select style="width: 100%;">{mod.FORUMS}</select><!-- ENDIF --></td>
 	</tr>
 <!-- BEGINELSE -->
-	<tr class="bg1">
+	<tr class="bg5">
 		<td colspan="3"><strong>{L_NO_MODERATORS}</strong></td>
 	</tr>
 <!-- END mod -->
 	</tbody>
 	</table>
 	
-	<span class="corners-bottom"><span></span></span></div>
 </div>
+	{$BCORNERS}
+		<br />
 	
 </form>
 

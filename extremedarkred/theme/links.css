@@ -83,7 +83,6 @@ a.topictitle:active {
 .postlink {
 	text-decoration: none;
 	color: #d2d2d2;
-	border-bottom: 1px solid #d2d2d2;
 	padding-bottom: 0;
 }
 
@@ -98,9 +97,8 @@ a.topictitle:active {
 }
 
 .postlink:hover {
-	background-color: #f6f6f6;
-	text-decoration: none;
-	color: #404040;
+	text-decoration: underline;
+	color: #808080;
 }
 
 .signature a, .signature a:visited, .signature a:active, .signature a:hover {

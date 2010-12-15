@@ -1,6 +1,5 @@
 <!-- INCLUDE overall_header.html -->
 
-<h2><!-- IF SEARCH_TITLE -->{SEARCH_TITLE}<!-- ELSE -->{SEARCH_MATCHES}<!-- ENDIF --><!-- IF SEARCH_WORDS -->: <a href="{U_SEARCH_WORDS}">{SEARCH_WORDS}</a><!-- ENDIF --></h2>
 <!-- IF IGNORED_WORDS --> <p>{L_IGNORED_TERMS}: <strong>{IGNORED_WORDS}</strong></p><!-- ENDIF -->
 
 <!-- IF SEARCH_TOPIC -->
@@ -34,9 +33,8 @@
 <!-- IF S_SHOW_TOPICS -->
 
 	<!-- IF .searchresults -->
-	<div class="forumbg">
-
-		<div class="inner"><span class="corners-top"><span></span></span>
+	{$BEGIN_TCORNERS}<!-- IF SEARCH_TITLE -->{SEARCH_TITLE}<!-- ELSE -->{SEARCH_MATCHES}<!-- ENDIF --><!-- IF SEARCH_WORDS -->: <a href="{U_SEARCH_WORDS}">{SEARCH_WORDS}</a><!-- ENDIF -->{$END_TCORNERS}
+	<div class="forabg">
 		<ul class="topiclist">
 			<li class="header">
 				<dl class="icon">
@@ -72,20 +70,21 @@
 		<!-- END searchresults -->
 		</ul>
 
-		<span class="corners-bottom"><span></span></span></div>
 	</div>
+	{$BCORNERS}
+		<br />
 	<!-- ELSE -->
-		<div class="panel">
-			<div class="inner"><span class="corners-top"><span></span></span>
+		<div>
+		<p style="background: #202020; margin-bottom: 0; padding: 6px;">
 			<strong>{L_NO_SEARCH_RESULTS}</strong>
-			<span class="corners-bottom"><span></span></span></div>
+		</p>
 		</div>
 	<!-- ENDIF -->
 
 <!-- ELSE -->
 
 	<!-- BEGIN searchresults -->
-		<div class="search post <!-- IF searchresults.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF --><!-- IF searchresults.S_POST_REPORTED --> reported<!-- ENDIF -->">
+		<div class="search post bg5<!-- IF searchresults.S_POST_REPORTED --> reported<!-- ENDIF -->">
 			<div class="inner"><span class="corners-top"><span></span></span>
 
 	<!-- IF searchresults.S_IGNORE_POST -->

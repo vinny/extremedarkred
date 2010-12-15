@@ -20,10 +20,8 @@
 
 <form method="post" action="{S_UCP_ACTION}" id="register">
 
-<div class="panel">
-	<div class="inner"><span class="corners-top"><span></span></span>
-
-	<h2>{SITENAME} - {L_REGISTRATION}</h2>
+{$BEGIN_TCORNERS}{SITENAME} - {L_REGISTRATION}{$END_TCORNERS}
+<div class="bg4">
 
 	<fieldset class="fields2">
 	<!-- IF ERROR --><dl><dd class="error">{ERROR}</dd></dl><!-- ENDIF -->
@@ -76,8 +74,9 @@
 	<!-- ENDIF -->
 
 	</fieldset>
-	<span class="corners-bottom"><span></span></span></div>
 </div>
+{$BCORNERS}
+		<br />
 <!-- IF CAPTCHA_TEMPLATE -->
 	<!-- DEFINE $CAPTCHA_TAB_INDEX = 8 -->
 	<!-- INCLUDE {CAPTCHA_TEMPLATE} -->
@@ -85,28 +84,23 @@
 
 <!-- IF S_COPPA -->
 
+{$BEGIN_TCORNERS}{L_COPPA_COMPLIANCE}{$END_TCORNERS}
+<div class="bg4">
 
-<div class="panel">
-	<div class="inner"><span class="corners-top"><span></span></span>
+	<p style="margin-bottom: 0; padding: 6px;">{L_COPPA_EXPLAIN}</p>
 
-	<h4>{L_COPPA_COMPLIANCE}</h4>
-
-	<p>{L_COPPA_EXPLAIN}</p>
-	<span class="corners-bottom"><span></span></span></div>
 </div>
+	{$BCORNERS}
+		<br />
 <!-- ENDIF -->
 
-<div class="panel">
-	<div class="inner"><span class="corners-top"><span></span></span>
-
+<div>
 	<fieldset class="submit-buttons">
 		{S_HIDDEN_FIELDS}
 		<input type="reset" value="{L_RESET}" name="reset" class="button2" />&nbsp;
 		<input type="submit" tabindex="9" name="submit" id="submit" value="{L_SUBMIT}" class="button1 default-submit-action" />
 		{S_FORM_TOKEN}
 	</fieldset>
-
-	<span class="corners-bottom"><span></span></span></div>
 </div>
 </form>
 

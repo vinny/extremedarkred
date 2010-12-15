@@ -1,20 +1,21 @@
 <!-- INCLUDE overall_header.html -->
 
 <form id="confirm" action="{S_CONFIRM_ACTION}" method="post">
-<div class="panel">
-	<div class="inner"><span class="corners-top"><span></span></span>
+{$BEGIN_TCORNERS}{MESSAGE_TITLE}{$END_TCORNERS}
+<div class="panel" style="margin-bottom: 0;">
 
-	<h2>{MESSAGE_TITLE}</h2>
-	<p>{MESSAGE_TEXT}</p>
+	<p style="margin-bottom: 0; padding: 6px; color: #FFFFFF;">{MESSAGE_TEXT}</p>
 	
+</div>
+	{$BCORNERS}
+		<br />
+		
 	<fieldset class="submit-buttons">
 		{S_HIDDEN_FIELDS}
 		<input type="submit" name="confirm" value="{L_YES}" class="button2" />&nbsp; 
 		<input type="submit" name="cancel" value="{L_NO}" class="button2" />
 	</fieldset>
-
-	<span class="corners-bottom"><span></span></span></div>
-</div>
+	
 </form>
 
 <!-- INCLUDE overall_footer.html -->

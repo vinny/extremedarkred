@@ -1,6 +1,15 @@
 
 
 <!-- IF .draftrow -->
+<!-- IF not S_PRIVMSGS -->{$BEGIN_TCORNERS}{L_LOAD_DRAFT}{$END_TCORNERS}
+<div class="bg4">
+
+	<p style="margin-bottom: 0; padding: 6px;">{L_LOAD_DRAFT_EXPLAIN}</p>
+
+</div>
+	{$BCORNERS}
+		<br />
+		<!-- ELSE -->
 <div class="panel">
 	<div class="inner"><span class="corners-top"><span></span></span>
 
@@ -9,9 +18,10 @@
 
 	<span class="corners-bottom"><span></span></span></div>
 </div>
+<!-- ENDIF -->
 
-<div class="<!-- IF not S_PRIVMSGS -->forumbg<!-- ELSE -->panel<!-- ENDIF -->">
-	<div class="inner"><span class="corners-top"><span></span></span>
+<div class="<!-- IF not S_PRIVMSGS -->forabg<!-- ELSE -->panel<!-- ENDIF -->">
+<!-- IF S_PRIVMSGS --><div class="inner"><span class="corners-top"><span></span></span><!-- ENDIF -->
 
 	<ul class="topiclist">
 		<li class="header">
@@ -38,7 +48,7 @@
 	<!-- END draftrow -->
 
 	</ul>
-
-	<span class="corners-bottom"><span></span></span></div>
+	<!-- IF S_PRIVMSGS --><span class="corners-bottom"><span></span></span></div><!-- ENDIF -->
 </div>
+	<!-- IF not S_PRIVMSGS -->{$BCORNERS}<br /><!-- ENDIF -->
 <!-- ENDIF -->

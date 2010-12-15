@@ -343,6 +343,7 @@ div[class].topic-actions {
 
 .panel h3 {
 	margin: 0.5em 0;
+	color: #FFFFFF
 }
 
 .panel p {
@@ -403,6 +404,7 @@ p.author {
 	padding: 0 0 5px 0;
 	font-family: Verdana, Helvetica, Arial, sans-serif;
 	font-size: 1em;
+	color: #FFFFFF;
 	line-height: 1.2em;
 }
 
@@ -543,7 +545,7 @@ dl.codebox code {
 	width: auto; 
 	margin: 5px 5px 5px 0;
 	padding: 6px;
-	background-color: #FFFFFF;
+	background-color: #000000;
 	border: 1px dashed #d8d8d8;
 	clear: left;
 }
@@ -660,7 +662,7 @@ fieldset.polls dl {
 	border-top: 1px solid #e2e2e2;
 	padding: 5px 0 0 0;
 	line-height: 120%;
-	color: #666666;
+	color: #FFFFFF;
 }
 
 fieldset.polls dl.voted {

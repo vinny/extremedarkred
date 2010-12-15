@@ -1,9 +1,7 @@
 <!-- IF S_TYPE == 1 -->
-<div class="panel">
-	<div class="inner"><span class="corners-top"><span></span></span>
-
-	<h3>{L_CONFIRMATION}</h3>
-	<p>{L_CONFIRM_EXPLAIN}</p>
+{$BEGIN_TCORNERS}{L_CONFIRMATION}{$END_TCORNERS}
+<div class="bg4">
+	<p style="margin-bottom: 0; padding: 6px;">{L_CONFIRM_EXPLAIN}</p>
 
 	<fieldset class="fields2">
 <!-- ENDIF -->
@@ -19,6 +17,7 @@
 
 <!-- IF S_TYPE == 1 -->
 	</fieldset>
-	<span class="corners-bottom"><span></span></span></div>
 </div>
+	{$BCORNERS}
+		<br />
 <!-- ENDIF -->

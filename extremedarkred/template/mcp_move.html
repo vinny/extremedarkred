@@ -2,11 +2,10 @@
 
 <form id="confirm" action="{S_CONFIRM_ACTION}" method="post">
 
-<div class="panel">
-	<div class="inner"><span class="corners-top"><span></span></span>
+	{$BEGIN_TCORNERS}{MESSAGE_TITLE}{$END_TCORNERS}
+<div class="panel" style="margin-bottom: 0;">
 
 	<div class="content">
-		<h2>{MESSAGE_TITLE}</h2>
 		<!-- IF ADDITIONAL_MSG --><p>{ADDITIONAL_MSG}</p><!-- ENDIF -->
 
 		<fieldset>
@@ -21,16 +20,16 @@
 		</dl>
 		</fieldset>
 
+	</div>
+
+</div>
+	{$BCORNERS}
+		
 		<fieldset class="submit-buttons">
 			{S_HIDDEN_FIELDS}<input type="submit" name="confirm" value="{YES_VALUE}" class="button1" />&nbsp; 
 			<input type="submit" name="cancel" value="{L_NO}" class="button2" />
 			{S_FORM_TOKEN}
 		</fieldset>
-
-	</div>
-
-	<span class="corners-bottom"><span></span></span></div>
-</div>
 </form>
 
 <!-- INCLUDE overall_footer.html -->

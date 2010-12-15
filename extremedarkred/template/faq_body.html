@@ -1,18 +1,9 @@
 <!-- INCLUDE overall_header.html -->
 
-<h2>{L_FAQ_TITLE}</h2>
-
-
-<div class="panel bg1" id="faqlinks">
-	<div class="inner"><span class="corners-top"><span></span></span>
-		<div class="column1">
+{$BEGIN_TCORNERS}{L_FAQ_TITLE}{$END_TCORNERS}
+<div class="bg4" id="faqlinks">
+		<div class="">
 		<!-- BEGIN faq_block -->
-			<!-- IF faq_block.SWITCH_COLUMN or (SWITCH_COLUMN_MANUALLY and faq_block.S_ROW_COUNT == 4) -->
-				</div>
-
-				<div class="column2">
-			<!-- ENDIF -->
-
 			<dl class="faq">
 				<dt><strong>{faq_block.BLOCK_TITLE}</strong></dt>
 				<!-- BEGIN faq_row -->
@@ -21,19 +12,16 @@
 			</dl>
 		<!-- END faq_block -->
 		</div>
-	<span class="corners-bottom"><span></span></span></div>
 </div>
-
+{$BCORNERS}
+		<br />
 
 
 <div class="clear"></div>
 
 <!-- BEGIN faq_block -->
-	<div class="panel <!-- IF faq_block.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
-		<div class="inner"><span class="corners-top"><span></span></span>
-
-		<div class="content">
-			<h2>{faq_block.BLOCK_TITLE}</h2>
+{$BEGIN_TCORNERS}{faq_block.BLOCK_TITLE}{$END_TCORNERS}
+	<div class="bg4">
 			<!-- BEGIN faq_row -->
 				<dl class="faq">
 					<dt id="f{faq_block.S_ROW_COUNT}r{faq_block.faq_row.S_ROW_COUNT}"><strong>{faq_block.faq_row.FAQ_QUESTION}</strong></dt>
@@ -42,10 +30,9 @@
 				</dl>
 				<!-- IF not faq_block.faq_row.S_LAST_ROW --><hr class="dashed" /><!-- ENDIF -->
 			<!-- END faq_row -->
-		</div>
-
-		<span class="corners-bottom"><span></span></span></div>
 	</div>
+	{$BCORNERS}
+		<br />
 <!-- END faq_block -->
 
 <!-- INCLUDE jumpbox.html -->

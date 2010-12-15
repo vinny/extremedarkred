@@ -12,7 +12,7 @@
 
 <!-- IF S_FORUM_RULES -->
 	{$BEGIN_TCORNERS}{L_FORUM_RULES}{$END_TCORNERS}
-	<div class="rules"><p style="background: #202020; margin-bottom: 0; padding: 6px;">
+	<div class="rules"><p style="margin-bottom: 0; padding: 6px;">
 		<!-- IF U_FORUM_RULES -->
 			<a href="{U_FORUM_RULES}">{L_FORUM_RULES}</a>
 		<!-- ELSE -->
@@ -68,10 +68,10 @@
 
 <!-- IF S_NO_READ_ACCESS -->
 
-	<div class="panel">
-		<div class="inner"><span class="corners-top"><span></span></span>
+	<div>
+		<p style="background: #202020; margin-bottom: 0; padding: 6px;">
 		<strong>{L_NO_READ_ACCESS}</strong>
-		<span class="corners-bottom"><span></span></span></div>
+		</p>
 	</div>
 
 	<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
@@ -165,10 +165,10 @@
 
 <!-- BEGINELSE -->
 	<!-- IF S_IS_POSTABLE -->
-	<div class="panel">
-		<div class="inner"><span class="corners-top"><span></span></span>
+	<div>
+		<p style="background: #202020; margin-bottom: 0; padding: 6px;">
 		<strong>{L_NO_TOPICS}</strong>
-		<span class="corners-bottom"><span></span></span></div>
+		</p>
 	</div>
 	<!-- ENDIF -->
 <!-- END topicrow -->
