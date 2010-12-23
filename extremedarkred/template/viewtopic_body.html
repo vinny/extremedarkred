@@ -255,15 +255,6 @@
 	<!-- ENDIF -->
 </div>
 
-<!-- IF S_TOPIC_MOD -->
-	<form method="post" action="{S_MOD_ACTION}">
-	<fieldset class="quickmod">
-		<label for="quick-mod-select">{L_QUICK_MOD}:</label> {S_TOPIC_MOD} <input type="submit" value="{L_GO}" class="button2" />
-		{S_FORM_TOKEN}
-	</fieldset>
-	</form>
-<!-- ENDIF -->
-
 <!-- INCLUDE jumpbox.html -->
 
 <!-- IF S_DISPLAY_ONLINE_LIST -->
@@ -271,6 +262,15 @@
 		<p style="background: #202020; margin-bottom: 0; padding: 6px;">{LOGGED_IN_USER_LIST}</p>
 	{$BCORNERS}
 	<br />
+<!-- ENDIF -->
+
+<!-- IF S_TOPIC_MOD -->
+	<form method="post" action="{S_MOD_ACTION}">
+	<fieldset class="quickmod">
+		<label for="quick-mod-select">{L_QUICK_MOD}:</label> {S_TOPIC_MOD} <input type="submit" value="{L_GO}" class="button2" />
+		{S_FORM_TOKEN}
+	</fieldset>
+	</form>
 <!-- ENDIF -->
 
 <!-- INCLUDE overall_footer.html -->

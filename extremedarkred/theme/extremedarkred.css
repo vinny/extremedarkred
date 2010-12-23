@@ -6,6 +6,12 @@ div#content {
 	padding: 15px;
 }
 
+ul.center li {
+    text-align: center;
+	list-style: none;
+	font-size: 1.1em;
+}
+
 /* Navigation */
 
 #nav {
@@ -69,12 +75,12 @@ div#navmenu a:hover {
 div.rounded_corners_top {
 	width: 100%;
 	height: 29px;
-	background: #000 url("{T_THEME_PATH}/images/rctm.gif") repeat-x;
+	background: #000 url("{T_THEME_PATH}/images/rounded_corners_top.gif") repeat-x;
 }
 div.rounded_corners_top div.left {
 	float: left;
 	width: 335px;
-	background: #000 url("{T_THEME_PATH}/images/rctl.gif") no-repeat;
+	background: #000 url("{T_THEME_PATH}/images/rounded_corners_top_left.gif") no-repeat;
 	color: #FFF;
 	font: bold 1.1em Verdana, Arial, Helvetica, sans-serif;
 	padding: 8px 0 10px 40px;
@@ -90,30 +96,24 @@ div.rounded_corners_top div.right {
 	float: right;
 	width: 9px;
 	height: 29px;
-	background: #000 url("{T_THEME_PATH}/images/rctr.gif") no-repeat;
+	background: #000 url("{T_THEME_PATH}/images/rounded_corners_top_right.gif") no-repeat;
 }
 
 /* Bottom rounded corners */
 div.rounded_corners_bottom {
 	width: 100%;
 	height: 9px;
-	background: #000 url("{T_THEME_PATH}/images/rcbm.gif") repeat-x;
+	background: #000 url("{T_THEME_PATH}/images/rounded_corners_bottom.gif") repeat-x;
 }
 div.rounded_corners_bottom div.left {
 	float: left;
 	width: 9px;
 	height: 9px;
-	background: #000 url("{T_THEME_PATH}/images/rcbl.gif") repeat-x;
+	background: #000 url("{T_THEME_PATH}/images/rounded_corners_bottom_left.gif") repeat-x;
 }
 div.rounded_corners_bottom div.right {
 	float: right;
 	width: 9px;
 	height: 9px;
-	background: #000 url("{T_THEME_PATH}/images/rcbr.gif") repeat-x;
-}
-
-ul.center li {
-    text-align: center;
-	list-style: none;
-	font-size: 1.1em;
+	background: #000 url("{T_THEME_PATH}/images/rounded_corners_bottom_right.gif") repeat-x;
 }

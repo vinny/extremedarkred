@@ -203,6 +203,7 @@ a#logo:hover {
 
 .forabg {
 	clear: both;
+	background-repeat: repeat-x;
 }
 
 .forumbg {
@@ -441,7 +442,7 @@ table.info tbody th {
 
 /* General classes for placing floating blocks */
 .left-box {
-	float: none;
+	float: left;
 	width: auto;
 	text-align: left;
 }

@@ -204,13 +204,12 @@ dl.details dd {
 
 .copyright {
 	color: #555555;
-	color: #555555;
-	background: url("{T_THEME_PATH}/images/rctm.gif") repeat-x #000000;
+	background: url("{T_THEME_PATH}/images/bg_footer.gif") repeat-x #000000;
     border-top: 1px solid #808080;
     color: #FFFFFF;
 	padding: 5px;
 	text-align: center;
-    font-size: 0.85em;
+    font-size: 1em;
     padding: 8px;
     text-align: center;
 }
@@ -230,7 +229,7 @@ li.reported:hover {
 	/* you can add a background for stickies and announcements*/
 }
 
-div.rules {
+div.rules, p.rules {
 	background: #2D2D2D;
 	color: #BC2A4D;
 	padding: 7px;
@@ -320,11 +319,11 @@ a.topictitle:active {
 
 /* Profile links */
 .postprofile a:link, .postprofile a:active, .postprofile a:visited, .postprofile dt.author a {
-	color: #105289;
+	color: #EFC2CE;
 }
 
 .postprofile a:hover, .postprofile dt.author a:hover {
-	color: #D31141;
+	color: #FF9FB9;
 }
 
 /* Profile searchresults */	
@@ -356,11 +355,11 @@ a.up:hover {
 }
 
 a.left:hover {
-	color: #368AD2;
+	color: none;
 }
 
 a.right:hover {
-	color: #368AD2;
+	color: none;
 }
 
 
