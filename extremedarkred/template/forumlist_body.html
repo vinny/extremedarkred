@@ -5,12 +5,27 @@
 
 			</div>
 		</div>
+	</div>
 		{$BCORNERS}
 		<br />
 	<!-- ENDIF -->
 
 	<!-- IF forumrow.S_IS_CAT or forumrow.S_FIRST_ROW  or forumrow.S_NO_CAT  -->
-	{$BEGIN_TCORNERS}<!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a><!-- ELSE -->{L_FORUM}<!-- ENDIF -->{$END_TCORNERS}
+	<div id="f_{forumrow.FORUM_ID}_h" style="display:none;">
+		{$BEGIN_TCORNERS}<img style="padding-top:1px;cursor:pointer;" src="{T_THEME_PATH}/images/cats_expand.gif" onclick="javascript:ShowHide('f_{forumrow.FORUM_ID}','f_{forumrow.FORUM_ID}_h','f_{forumrow.FORUM_ID}');" alt="{L_FORUM}" />&nbsp;<!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a><!-- ELSE -->{L_FORUM}<!-- ENDIF -->{$END_TCORNERS}
+	</div>	
+	
+	<div id="f_{forumrow.FORUM_ID}">
+			<script type="text/javascript">
+			<!--
+			tmp = 'f_{forumrow.FORUM_ID}';
+				if(GetCookie(tmp) == '2')
+			{
+				ShowHide('f_{forumrow.FORUM_ID}', 'f_{forumrow.FORUM_ID}_h', 'f_{forumrow.FORUM_ID}');
+			}
+			//-->
+			</script>
+	{$BEGIN_TCORNERS}<img style="padding-top:1px;cursor:pointer;" src="{T_THEME_PATH}/images/cats_collapse.gif" onclick="javascript:ShowHide('f_{forumrow.FORUM_ID}','f_{forumrow.FORUM_ID}_h','f_{forumrow.FORUM_ID}');" alt="{L_FORUM}" />&nbsp;<!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a><!-- ELSE -->{L_FORUM}<!-- ENDIF -->{$END_TCORNERS}
 		<div class="forabg">
 			<div class="inner">
 			<ul class="topiclist">
@@ -60,6 +75,7 @@
 
 			</div>
 		</div>
+	</div>
 		{$BCORNERS}
 		<br />
 	<!-- ENDIF -->
