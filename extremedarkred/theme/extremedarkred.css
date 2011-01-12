@@ -73,12 +73,14 @@ div#navmenu a:hover {
 
 /* Top rounded corners */
 div.rounded_corners_top {
+	float: none;
 	width: 100%;
 	height: 29px;
 	background: #000 url("{T_THEME_PATH}/images/rounded_corners_top.gif") repeat-x;
 }
 div.rounded_corners_top div.left {
 	float: left;
+	height: 12px;
 	width: 335px;
 	background: #000 url("{T_THEME_PATH}/images/rounded_corners_top_left.gif") no-repeat;
 	color: #FFF;
