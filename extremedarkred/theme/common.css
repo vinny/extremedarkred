@@ -103,7 +103,6 @@ p.right {
 ---------------------------------------- */
 #wrap {
 	min-width: 650px;
-	width: 95%;
 	margin: 0 auto;
 	background: #0D0D0D;
 	border-color: #808080;
@@ -244,6 +243,7 @@ a#logo:hover {
     border-style: solid;
     border-width: 0 1px 1px 0;
     margin-bottom: 1px;
+	overflow: hidden;
 }
 
 .rowbg {

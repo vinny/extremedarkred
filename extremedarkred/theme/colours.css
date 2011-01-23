@@ -90,7 +90,7 @@ hr.dashed {
 }
 
 .bg1	{ background-color: #ECF3F7; }
-.bg2	{ background-color: #e1ebf2;  }
+.bg2	{ background-color: #2D2D2D;  }
 .bg3	{ background-color: #cadceb; }
 
 .bg5 	{ background-color: #5E5E5E; }
@@ -278,7 +278,7 @@ a.forumtitle:hover {
 }
 
 a.forumtitle:active {
-	color: #105289;
+	color: #CC0000;
 }
 
 a.topictitle {
@@ -292,7 +292,7 @@ a.topictitle:hover {
 }
 
 a.topictitle:active {
-	color: #105289;
+	color: #CC0000;
 }
 
 /* Post body links */
