@@ -80,7 +80,7 @@ div.rounded_corners_top {
 div.rounded_corners_top div.left {
 	float: left;
 	height: 12px;
-	width: 335px;
+	width: 430px;
 	background: #000 url("{T_THEME_PATH}/images/rounded_corners_top_left.gif") no-repeat;
 	color: #FFF;
 	font: bold 1.1em Verdana, Arial, Helvetica, sans-serif;
