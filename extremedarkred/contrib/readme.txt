@@ -1,10 +1,13 @@
 ¬ Special thanks:
 
 - GHS (http://www.ghsweb.com.br/)
-		* For allowing me to continue his style.
+	* For allowing me to continue his style.
 
 - Kynetic (http://www.colormylife.fr/)
 	* For providing the PSD for the imageset.
+
+- spaceace (http://www.livemembersonly.com/)
+	* For providing the PSD for the site-logo
 
 
 
