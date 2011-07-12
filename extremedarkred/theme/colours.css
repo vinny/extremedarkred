@@ -174,7 +174,7 @@ dl.details dd {
 	border-color: #FF0000;
 }
 
-.pagination span a, .pagination span a:link, .pagination span a:visited, .pagination span a:active {
+.pagination span a, .pagination span a:link, .pagination span a:visited {
 	color: #5C758C;
 	background-color: #ECEDEE;
 	border-color: #B4BAC0;
@@ -184,6 +184,12 @@ dl.details dd {
 	border-color: #FF0000;
 	background-color: #AA0000;
 	color: #FFF;
+}
+
+.pagination span a:active {
+	color: #5C758C;
+	background-color: #ECEDEE;
+	border-color: #B4BAC0;
 }
 
 /* Pagination in viewforum for multipage topics */
@@ -302,7 +308,7 @@ a.topictitle:active {
 
 .postlink:visited {
 	color: #CC0000;
-	border-bottom-color: #666666;
+	border-bottom-color: #5D8FBD;
 }
 
 .postlink:active {
@@ -313,17 +319,21 @@ a.topictitle:active {
 	color: #808080;
 }
 
-.signature a, .signature a:visited, .signature a:active, .signature a:hover {
+.signature a, .signature a:visited, .signature a:hover, .signature a:active {
 	background-color: transparent;
 }
 
 /* Profile links */
-.postprofile a:link, .postprofile a:active, .postprofile a:visited, .postprofile dt.author a {
+.postprofile a:link, .postprofile a:visited, .postprofile dt.author a {
 	color: #EFC2CE;
 }
 
 .postprofile a:hover, .postprofile dt.author a:hover {
 	color: #FF9FB9;
+}
+
+.postprofile a:active {
+	color: #EFC2CE;
 }
 
 /* Profile searchresults */	
@@ -662,7 +672,7 @@ fieldset.polls dd div {
 }
 
 .online {
-	background-image: url("{T_IMAGESET_LANG_PATH}/icon_user_online.gif");
+	background-image: url("{IMG_ICON_USER_ONLINE_SRC}");
 }
 
 /*  	
