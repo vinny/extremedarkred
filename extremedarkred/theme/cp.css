@@ -425,7 +425,7 @@ ol.def-rules li {
 
 .pmlist li.pm_foe_colour, .pm_foe_colour {
 	padding: 0;
-	border: solid 3px #FFFFFF;
+	border: solid 3px #000000;
 	border-width: 0 3px;
 }
 

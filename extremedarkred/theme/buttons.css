@@ -51,7 +51,7 @@
 
 /* Sub-header (navigation bar)
 --------------------------------------------- */
-a.print, a.sendemail, a.fontsize {
+a.print, a.sendemail {
 	display: block;
 	overflow: hidden;
 	height: 18px;
