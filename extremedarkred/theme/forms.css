@@ -21,13 +21,13 @@ input {
 select {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	color: #FFFFFF;
-	font-size: 1.1em;
 	font-weight: normal;
 	cursor: pointer;
 	vertical-align: middle;
 	border: 1px solid #FF0000;
 	padding: 1px;
 	background-color: #AA0000;
+	font-size: 1em;
 }
 
 option {

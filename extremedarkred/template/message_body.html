@@ -1,4 +1,8 @@
-<!-- INCLUDE overall_header.html -->
+<!-- IF S_SIMPLE_MESSAGE -->
+	<!-- INCLUDE simple_header.html -->
+<!-- ELSE -->
+	<!-- INCLUDE overall_header.html -->
+<!-- ENDIF -->
 
 {$BEGIN_TCORNERS}{MESSAGE_TITLE}{$END_TCORNERS}
 <div class="bg4" id="message">
@@ -8,4 +12,8 @@
 	{$BCORNERS}
 		<br />
 
-<!-- INCLUDE overall_footer.html -->
+<!-- IF S_SIMPLE_MESSAGE -->
+	<!-- INCLUDE simple_footer.html -->
+<!-- ELSE -->
+	<!-- INCLUDE overall_footer.html -->
+<!-- ENDIF -->
