@@ -1,0 +1,20 @@
+{
+	"name": "phpbb/style",
+	"description": "A dark and red style. Fluid width style with tableless design.",
+	"homepage": "https://github.com/vinny/extremedarkred",
+	"version": "3.2.2",
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Vinny",
+			"email": "vinnykun01@gmail.com",
+			"homepage": "https://vinny.github.io",
+			"role": "Developer"
+		}
+	],
+	"devDependencies": {
+		"gulp": "*",
+		"gulp-uglify": "*",
+		"gulp-concat": "*"
+	},
+}
