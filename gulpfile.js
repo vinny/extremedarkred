@@ -20,7 +20,7 @@ gulp.task('minify-css', function(){
 	.pipe(gulp.dest('./extremedarkred/theme/'));
 });
  
-gulp.task('default','minify-css');
+gulp.task('default',['minify-css']);
  
 gulp.task('watch', function() {
 	gulp.watch(css, ['minify-css']);
