@@ -1,6 +1,7 @@
 {
-	"name": "phpbb/style",
+	"name": "extremedarkred",
 	"description": "A dark and red style. Fluid width style with tableless design.",
+	"type": "phpbb-style",
 	"homepage": "https://github.com/vinny/extremedarkred",
 	"version": "3.2.2",
 	"license": "GPL-2.0",
@@ -16,5 +17,5 @@
 		"gulp": "*",
 		"gulp-uglify": "*",
 		"gulp-concat": "*"
-	},
+	}
 }
