@@ -1,5 +1,5 @@
 var css = [
-	'./extremedarkred/theme/stylesheet.css'
+	'./theme/stylesheet.css'
 ];
  
 var gulp = require('gulp');
@@ -17,7 +17,7 @@ gulp.task('minify-css', function(){
 	.pipe(concat('stylesheet.min.css'))
 	.pipe(stripCssComments({all: true}))
 	.pipe(cssmin())
-	.pipe(gulp.dest('./extremedarkred/theme/'));
+	.pipe(gulp.dest('./theme/'));
 });
  
 gulp.task('default',['minify-css']);
