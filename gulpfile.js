@@ -13,7 +13,7 @@ var css = [
 	'./theme/bidi.css',
 	'./theme/responsive.css',
 	'./theme/tweaks.css',
-	'./theme/extrenedarkred.css'
+	'./theme/extremedarkred.css'
 ];
  
 var gulp = require('gulp');
