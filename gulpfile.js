@@ -1,5 +1,19 @@
 var css = [
-	'./theme/stylesheet.css'
+	'./theme/normalize.css',
+	'./theme/base.css',
+	'./theme/utilities.css',
+	'./theme/common.css',
+	'./theme/links.css',
+	'./theme/content.css',
+	'./theme/buttons.css',
+	'./theme/cp.css',
+	'./theme/forms.css',
+	'./theme/icons.css',
+	'./theme/colours.css',
+	'./theme/bidi.css',
+	'./theme/responsive.css',
+	'./theme/tweaks.css',
+	'./theme/extrenedarkred.css'
 ];
  
 var gulp = require('gulp');
