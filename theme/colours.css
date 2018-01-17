@@ -201,6 +201,10 @@ dl.details dd {
 	color: #196db5;
 }
 
+.icon.online {
+	color: #85de39;
+}
+
 .icon.icon-green, a:hover .icon.icon-green{
 	color: #1b9A1B;
 }
@@ -423,12 +427,7 @@ dl.faq dt {
 /* Quote block */
 blockquote {
 	background-color: #333333;
-	background-image: url("./images/quote.gif");
 	border-color: #4c4c4c #000000 #000000 #4c4c4c;
-}
-
-.rtl blockquote {
-	background-image: url("./images/quote_rtl.gif");
 }
 
 blockquote blockquote {
@@ -455,13 +454,6 @@ blockquote blockquote blockquote {
 .codebox code {
 	color: #2E8B57;
 }
-
-.syntaxbg		{ color: #FFFFFF; }
-.syntaxcomment	{ color: #FF8000; }
-.syntaxdefault	{ color: #0000BB; }
-.syntaxhtml		{ color: #000000; }
-.syntaxkeyword	{ color: #007700; }
-.syntaxstring	{ color: #DD0000; }
 
 /* Attachments
 ----------------------------------------*/
@@ -554,10 +546,6 @@ fieldset.polls dd div {
 
 .postprofile strong {
 	color: #FFFFFF;
-}
-
-.online {
-	background-image: url("./en/icon_user_online.gif");
 }
 
 dd.profile-warnings {
@@ -965,11 +953,11 @@ fieldset.quick-login input.inputbox {
 }
 
 .inputbox:-moz-placeholder {
-	color: #333333;
+	color: #FFFFFF;
 }
 
 .inputbox::-webkit-input-placeholder {
-	color: #333333;
+	color: #FFFFFF;
 }
 
 .inputbox:hover {

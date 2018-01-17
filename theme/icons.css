@@ -9,7 +9,7 @@
  * Just change the name of the font after the 14/1 to the name of
  * the font you wish to use.
  */
-.icon, .button .icon, blockquote cite:before, .uncited:before {
+.icon, .button .icon, blockquote cite:before, .uncited:before, .icon_topic_attach:after {
 	display: inline-block;
   	font-weight: normal;
   	font-style: normal;
@@ -94,3 +94,6 @@ blockquote cite:before, .uncited:before {
 	content: '\f10e'; /* Font Awesome quote-right */
 }
 
+.icon_topic_attach:after {
+	content: '\f0c6';
+}
