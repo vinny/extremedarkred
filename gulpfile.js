@@ -12,7 +12,6 @@ var css = [
 	'./theme/colours.css',
 	'./theme/bidi.css',
 	'./theme/responsive.css',
-	'./theme/tweaks.css',
 	'./theme/extremedarkred.css'
 ];
 
