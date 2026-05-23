@@ -1,0 +1,24 @@
+/*  phpBB Style Sheet
+    --------------------------------------------------------------
+	Style name:			ExtremeDark Red
+	Based on style:		prosilver (the default phpBB 4 style)
+	Original author:	Tom Beddard ( http://www.subblue.com/ )
+	Modified by:		Vinny
+    --------------------------------------------------------------
+*/
+
+@import url("../../prosilver/theme/normalize.css?hash=e6c08715");
+@import url("../../prosilver/theme/base.css?hash=e4336923");
+@import url("../../prosilver/theme/utilities.css?hash=b95e1ad4");
+@import url("../../prosilver/theme/icons.css?hash=cf9a9308");
+@import url("../../prosilver/theme/common.css?hash=3e946b8c");
+@import url("../../prosilver/theme/buttons.css?hash=be0468e7");
+@import url("../../prosilver/theme/links.css?hash=20df6b95");
+@import url("../../prosilver/theme/mentions.css?hash=308fbc69");
+@import url("../../prosilver/theme/content.css?hash=cab73962");
+@import url("../../prosilver/theme/cp.css?hash=9ed1a111");
+@import url("../../prosilver/theme/forms.css?hash=e6a667ba");
+@import url("../../prosilver/theme/colours.css?hash=fae5c302");
+@import url("../../prosilver/theme/responsive.css?hash=62adf6f6");
+@import url("../../prosilver/theme/bidi.css?hash=2e917914");
+@import url("extremedarkred.css?hash=0522a041");

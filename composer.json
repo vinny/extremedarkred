@@ -1,0 +1,23 @@
+{
+    "name": "vinny/extremedarkred",
+    "description": "ExtremeDark Red style for phpBB 4",
+    "type": "phpbb-style",
+    "version": "4.0.0-a2",
+    "homepage": "https://github.com/vinny/extremedarkred/",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Vinny",
+            "homepage": "https://github.com/vinny/extremedarkred/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/vinny/extremedarkred/issues",
+        "forum": "https://www.phpbb.com/customise/db/style/extremedark_red_3/support"
+    },
+    "extra": {
+        "display-name": "ExtremeDark Red",
+        "phpbb-version": "4.0.0-a2",
+        "parent-style": "prosilver"
+    }
+}

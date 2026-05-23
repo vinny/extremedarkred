@@ -1,0 +1,124 @@
+<!-- INCLUDE overall_header.html -->
+
+<!-- EVENT index_body_markforums_before -->
+<!-- EVENT index_body_markforums_after -->
+<!-- EVENT index_body_forumlist_body_before -->
+
+<!-- INCLUDE forumlist_body.html -->
+
+<!-- EVENT index_body_forumlist_body_after -->
+
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+	<form method="post" action="{S_LOGIN_ACTION}" class="headerspace">
+	<h3><a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a><!-- IF S_REGISTER_ENABLED -->&nbsp; &bull; &nbsp;<a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF --></h3>
+		<fieldset class="quick-login">
+			<label for="username"><span>{L_USERNAME}{L_COLON}</span> <input type="text" tabindex="1" name="username" id="username" size="10" class="inputbox" title="{L_USERNAME}" autocomplete="username" /></label>
+			<label for="password"><span>{L_PASSWORD}{L_COLON}</span> <input type="password" tabindex="2" name="password" id="password" size="10" class="inputbox" title="{L_PASSWORD}" autocomplete="current-password" /></label>
+			<!-- IF U_SEND_PASSWORD -->
+				<a href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a>
+			<!-- ENDIF -->
+			<!-- IF S_AUTOLOGIN_ENABLED -->
+				<span class="responsive-hide">|</span> <label for="autologin">{L_LOG_ME_IN} <input type="checkbox" tabindex="4" name="autologin" id="autologin" checked /></label>
+			<!-- ENDIF -->
+			<input type="submit" tabindex="5" name="login" value="{L_LOGIN}" class="button1 button button-form-bold" />
+			{S_LOGIN_REDIRECT}
+			{S_FORM_TOKEN_LOGIN}
+		</fieldset>
+	</form>
+<!-- ENDIF -->
+
+<!-- EVENT index_body_stat_blocks_before -->
+
+<!-- IF S_DISPLAY_ONLINE_LIST or S_DISPLAY_BIRTHDAY_LIST or NEWEST_USER -->
+	<div class="edr-index-info">
+		<!-- IF S_DISPLAY_ONLINE_LIST -->
+			<input class="edr-index-tab-input" type="radio" name="edr-index-info-tabs" id="edr-index-tab-online" checked="checked" />
+		<!-- ENDIF -->
+		<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
+			<input class="edr-index-tab-input" type="radio" name="edr-index-info-tabs" id="edr-index-tab-birthdays"<!-- IF not S_DISPLAY_ONLINE_LIST --> checked="checked"<!-- ENDIF --> />
+		<!-- ENDIF -->
+		<!-- IF NEWEST_USER -->
+			<input class="edr-index-tab-input" type="radio" name="edr-index-info-tabs" id="edr-index-tab-statistics"<!-- IF not S_DISPLAY_ONLINE_LIST and not S_DISPLAY_BIRTHDAY_LIST --> checked="checked"<!-- ENDIF --> />
+		<!-- ENDIF -->
+
+		<div class="edr-index-tabs" role="tablist">
+			<!-- IF S_DISPLAY_ONLINE_LIST -->
+				<label class="edr-index-tab edr-index-tab-online" for="edr-index-tab-online" role="tab">
+					{{ Icon('font', 'users', '', true, 'fas') }}
+					<span>{L_WHO_IS_ONLINE}</span>
+				</label>
+			<!-- ENDIF -->
+			<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
+				<label class="edr-index-tab edr-index-tab-birthdays" for="edr-index-tab-birthdays" role="tab">
+					{{ Icon('font', 'cake-candles', '', true, 'fas') }}
+					<span>{L_BIRTHDAYS}</span>
+				</label>
+			<!-- ENDIF -->
+			<!-- IF NEWEST_USER -->
+				<label class="edr-index-tab edr-index-tab-statistics" for="edr-index-tab-statistics" role="tab">
+					{{ Icon('font', 'chart-simple', '', true, 'fas') }}
+					<span>{L_STATISTICS}</span>
+				</label>
+			<!-- ENDIF -->
+		</div>
+
+		<div class="edr-index-panels">
+			<!-- IF S_DISPLAY_ONLINE_LIST -->
+				<section class="stat-block online-list edr-index-panel edr-index-panel-online" role="tabpanel">
+					<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
+					<p>
+						<!-- EVENT index_body_block_online_prepend -->
+						{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br />
+						<!-- IF U_VIEWONLINE -->
+							<br />{LOGGED_IN_USER_LIST}
+							{% if LEGEND|length > 0 %}
+								{% apply spaceless %}
+									<br>
+									<em>
+										{{ lang('LEGEND') ~ lang('COLON') }}
+										{% for group in LEGEND %}
+											{% if group.GROUP_URL %}
+												<a style="color:#{{ group.GROUP_COLOR }}" href="{{ group.GROUP_URL }}" alt="{{ group.GROUP_NAME }}">{{ group.GROUP_NAME }}</a>{% if not loop.last %}, {% endif %}
+											{% else %}
+												<span style="color:#{{ group.GROUP_COLOR }}">{{ group.GROUP_NAME }}</span>{% if not loop.last %}, {% endif %}
+											{% endif %}
+										{% endfor %}
+									</em>
+								{% endapply %}
+							{% endif %}
+						<!-- ENDIF -->
+						<!-- EVENT index_body_block_online_append -->
+					</p>
+				</section>
+			<!-- ENDIF -->
+
+			<!-- EVENT index_body_birthday_block_before -->
+
+			<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
+				<section class="stat-block birthday-list edr-index-panel edr-index-panel-birthdays" role="tabpanel">
+					<h3>{L_BIRTHDAYS}</h3>
+					<p>
+						<!-- EVENT index_body_block_birthday_prepend -->
+						<!-- IF .birthdays -->{L_CONGRATULATIONS}{L_COLON} <strong><!-- BEGIN birthdays -->{birthdays.USERNAME}<!-- IF birthdays.AGE !== '' --> ({birthdays.AGE})<!-- ENDIF --><!-- IF not birthdays.S_LAST_ROW -->, <!-- ENDIF --><!-- END birthdays --></strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF -->
+						<!-- EVENT index_body_block_birthday_append -->
+					</p>
+				</section>
+			<!-- ENDIF -->
+
+			<!-- IF NEWEST_USER -->
+				<section class="stat-block statistics edr-index-panel edr-index-panel-statistics" role="tabpanel">
+					<h3>{L_STATISTICS}</h3>
+					<p>
+						<!-- EVENT index_body_block_stats_prepend -->
+						{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}
+						<!-- EVENT index_body_block_stats_append -->
+					</p>
+				</section>
+			<!-- ENDIF -->
+		</div>
+	</div>
+<!-- ENDIF -->
+
+<!-- EVENT index_body_stat_blocks_after -->
+
+<!-- INCLUDE overall_footer.html -->
