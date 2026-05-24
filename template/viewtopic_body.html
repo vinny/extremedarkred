@@ -521,12 +521,14 @@
 <!-- IF S_DISPLAY_ONLINE_LIST and U_VIEWONLINE -->
 	<div class="edr-index-info edr-viewtopic-info">
 		<input class="edr-index-tab-input" type="radio" name="edr-viewtopic-info-tabs" id="edr-viewtopic-tab-online" checked="checked" />
+		{% EVENT extremedarkred_viewtopic_input %}
 
 		<div class="edr-index-tabs" role="tablist">
 			<label class="edr-index-tab edr-index-tab-online" for="edr-viewtopic-tab-online" role="tab">
 				{{ Icon('font', 'users', '', true, 'fas') }}
 				<span>{L_WHO_IS_ONLINE}</span>
 			</label>
+			{% EVENT extremedarkred_viewtopic_tabs_label %}
 		</div>
 
 		<div class="edr-index-panels">
@@ -534,6 +536,7 @@
 				<h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3>
 				<p>{LOGGED_IN_USER_LIST}</p>
 			</section>
+			{% EVENT extremedarkred_viewtopic_panels %}
 		</div>
 	</div>
 <!-- ENDIF -->

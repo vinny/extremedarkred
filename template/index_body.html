@@ -40,6 +40,7 @@
 		<!-- IF NEWEST_USER -->
 			<input class="edr-index-tab-input" type="radio" name="edr-index-info-tabs" id="edr-index-tab-statistics"<!-- IF not S_DISPLAY_ONLINE_LIST and not S_DISPLAY_BIRTHDAY_LIST --> checked="checked"<!-- ENDIF --> />
 		<!-- ENDIF -->
+		{% EVENT extremedarkred_index_info_input %}
 
 		<div class="edr-index-tabs" role="tablist">
 			<!-- IF S_DISPLAY_ONLINE_LIST -->
@@ -60,6 +61,7 @@
 					<span>{L_STATISTICS}</span>
 				</label>
 			<!-- ENDIF -->
+			{% EVENT extremedarkred_index_tabs_label %}
 		</div>
 
 		<div class="edr-index-panels">
@@ -115,6 +117,7 @@
 					</p>
 				</section>
 			<!-- ENDIF -->
+		{% EVENT extremedarkred_index_panels %}
 		</div>
 	</div>
 <!-- ENDIF -->

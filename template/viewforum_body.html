@@ -347,6 +347,7 @@
 		<!-- IF S_IS_POSTABLE and rules|length -->
 			<input class="edr-index-tab-input" type="radio" name="edr-viewforum-info-tabs" id="edr-viewforum-tab-permissions"<!-- IF not (S_DISPLAY_ONLINE_LIST and U_VIEWONLINE) --> checked="checked"<!-- ENDIF --> />
 		<!-- ENDIF -->
+		{% EVENT extremedarkred_viewforum_input %}
 
 		<div class="edr-index-tabs" role="tablist">
 			<!-- IF S_DISPLAY_ONLINE_LIST and U_VIEWONLINE -->
@@ -361,6 +362,7 @@
 					<span>{L_FORUM_PERMISSIONS}</span>
 				</label>
 			<!-- ENDIF -->
+			{% EVENT extremedarkred_viewforum_tabs_label %}
 		</div>
 
 		<div class="edr-index-panels">
@@ -377,6 +379,7 @@
 					<p><!-- BEGIN rules -->{rules.RULE}<br /><!-- END rules --></p>
 				</section>
 			<!-- ENDIF -->
+			{% EVENT extremedarkred_viewforum_panels %}
 		</div>
 	</div>
 <!-- ENDIF -->

@@ -3,7 +3,7 @@
 	Style name:			ExtremeDark Red
 	Based on style:		prosilver (the default phpBB 4 style)
 	Original author:	Tom Beddard ( http://www.subblue.com/ )
-	Modified by:		Vinny
+	Modified by:		Vinny (https://github.com/vinny)
     --------------------------------------------------------------
 */
 
@@ -21,4 +21,4 @@
 @import url("../../prosilver/theme/colours.css?hash=fae5c302");
 @import url("../../prosilver/theme/responsive.css?hash=62adf6f6");
 @import url("../../prosilver/theme/bidi.css?hash=2e917914");
-@import url("extremedarkred.css?hash=0522a041");
+@import url("extremedarkred.css?hash=0523a006");
